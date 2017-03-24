@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding= "UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd" >
+
+<configuration>
+	<mappers>
+		<mapper resource="/mybatis/MemberMapper.xml" />
+		<mapper resource="/mybatis/MokTestMapper.xml" />
+		<mapper resource="/mybatis/SchoolTestMapper.xml" />
+		<mapper resource="/mybatis/BoardMapper.xml" />
+		<mapper resource="/mybatis/CommentMapper.xml" />
+		<mapper resource="/mybatis/ConsultMapper.xml" />
+		<mapper resource="/mybatis/GalleryMapper.xml" />
+		<mapper resource="/mybatis/CalendarMapper.xml" />
+		<mapper resource="/mybatis/UnivScoreMapper.xml" />
+		<mapper resource="/mybatis/VoteMapper.xml" />
+	</mappers>
+</configuration>
+
+<!--  
+ * http://www.apache.org/licenses/LICENSE-2.0 
+ * Licensed under the Apache License, Version 2.0 
+ -->

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding= "UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gys.classmanager.dao.CalendarDao">
+
+	<insert id="inputCalendar">
+		INSERT
+		INTO
+		CALENDAR (SELECTDATE, TIME, CONTENT,
+		GRADE, CLASSNUM, DAY)
+		VALUES
+		(#{0}, #{1}, #{2},
+		#{3}, #{4}, #{5})
+	</insert>
+	<select id="listCalendar" resultType="com.gys.classmanager.dto.CalendarDto">
+		SELECT *
+		FROM
+		CALENDAR WHERE grade=#{0} AND classNum = #{1} ORDER BY DAY ASC;
+	</select>
+
+	<delete id="deletePlan">
+		DELETE FROM CALENDAR WHERE IDX = #{0}
+	</delete>
+</mapper>
+
+<!--  
+ * http://www.apache.org/licenses/LICENSE-2.0 
+ * Licensed under the Apache License, Version 2.0 
+ -->

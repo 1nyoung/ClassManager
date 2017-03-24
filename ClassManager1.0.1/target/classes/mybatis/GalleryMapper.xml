@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding= "UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gys.classmanager.dao.GalleyDao">
+
+	<insert id="upload">
+		INSERT
+		INTO
+		GALLERY (ID, GRADE, CLASSNUM,
+		STDTGRADE, STDTCLASSNUM, PHOTONAME, TITLE)
+		VALUES
+		(#{0}, #{1}, #{2},
+		#{3}, #{4}, #{5}, #{6})
+	</insert>
+
+	<select id="listPhoto" resultType="com.gys.classmanager.dto.GalleryDto">
+
+		SELECT * FROM GALLERY
+		WHERE GRADE= #{0} AND CLASSNUM = #{1} ORDER BY IDX ASC
+
+	</select>
+
+	<select id="selectPhoto" resultType="com.gys.classmanager.dto.GalleryDto">
+
+		SELECT * FROM GALLERY
+		WHERE idx= #{0}
+
+	</select>
+	
+	<delete id="galleryDel">
+		DELETE FROM GALLERY WHERE IDX = #{0}
+	</delete>
+
+</mapper>
+
+<!--  
+ * http://www.apache.org/licenses/LICENSE-2.0 
+ * Licensed under the Apache License, Version 2.0 
+ -->
